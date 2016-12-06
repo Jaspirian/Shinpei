@@ -1,0 +1,616 @@
+#frame {
+	background-color: rgba(255,255,255,.7);
+	background-image:url("http://i.imgur.com/mwBMayX.png?1");
+	background-repeat:xy;
+	overflow:hidden;
+	background-blend-mode: screen;
+
+	max-width: 1200px;
+
+	text-align: center;
+	padding:5%;
+}
+
+h1 {
+	font-size:400%;
+	margin-top:-1%;
+	color:#900;
+
+	-webkit-text-stroke: .8px black;
+}
+
+h2 {
+	text-align: center;
+	font-size:150%;
+	font-weight: bold;
+	font-style: italic;
+	color: red;
+	-webkit-text-stroke: .5px black;
+
+	margin:-.1%;
+}
+
+.comparison {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	/*border:2px solid blue;*/
+}
+
+.opaque {
+	width:100%;
+	margin:0% 2% 0% 2%;
+	padding: .6%;
+	border-radius: 25px;
+	background-color: rgba(255,255,255,0.8);
+	text-align:left;
+
+	/*border:2px solid green;*/
+}
+
+.opaque.left {
+	width:300%;
+}
+
+.opaque.onebox {
+	width:auto;
+}
+
+.opaque.image {
+	margin:auto;
+
+	width:250px;
+}
+
+.opaque.response {
+	color:#900;
+	font-style: italic;
+}
+
+
+
+.clickable {
+	margin:0% 2% 0% 2%;
+}
+
+.title {
+	font-weight: bold;
+	color: #CF0000;
+}
+
+
+/*MOVING IMAGES*/
+
+.opaque.image > div {
+	width:250px;
+	height:125px;
+	transition:background-position 1s;
+} 
+
+#douji {
+	background: url('http://i.imgur.com/cYGScIt.png?1') no-repeat center 43%; 
+	height:200px; 
+}
+#douji:hover {
+	background-position:center 17%;
+}
+
+#world {
+	background: url('http://i.imgur.com/0EiRkC8.jpg?1') no-repeat right 40%; 
+}
+#world:hover {
+	background-position:left 100%;
+}
+
+#appearance {
+	background: url('http://i.imgur.com/xKbmu25.jpg') no-repeat 80% 30%; 
+}
+#appearance:hover {
+	background-position:left 97%;
+}
+
+#power {
+	background: url('http://i.imgur.com/0QYLLLT.png') no-repeat center 25%; 
+}
+#power:hover {
+	background-position:35% 40%;
+}
+
+.opaque.image .text  {
+
+	font-size:12px;
+	font-style:italic;
+	color: #900;
+	text-align: center;
+
+	width:inherit;
+	background-color:rgba(255,255,255,.5);
+	display:none;
+	position:absolute;
+}
+.opaque.image:hover .text {
+	display:block;
+}
+
+/*CHANGING TEXT*/
+
+#inspirer:after {
+	content: "THE INSPIRER";
+}
+
+#inspirer:hover:after {
+	content: "THE BABE WHISPERER";
+	color:#900;
+	font-style: italic;
+}
+
+#warm:after {
+	content: "ENFPs are warm, enthusiastic people, typically very bright and full of potential. They live in the world of possibilities, and can become very passionate and excited about things. Their enthusiasm lends them the ability to inspire and motivate others, more so than we see in other types. They can talk their way in or out of anything. They love life, seeing it as a special gift, and strive to make the most out of it.";
+}
+
+#warm:hover:after {
+	content: "\"Inspire and motivate others.\" How can you stand this crap? You know, things like this are just designed to sound like they can apply to everyone. Like the Horoscope. You don't think I'm dumb enough to trust daily fortunes, do you? The only thing in here that applies is the \"Talk my way out of anything\" part. I've done that more times than I can count. Life as a special gift, though? Don't be silly.";
+	color:#900;
+	font-style: italic;
+}
+
+#talents:after {
+	content:"ENFPs have an unusually broad range of skills and talents. They are good at most things which interest them. Project-oriented, they may go through several different careers during their lifetime. To onlookers, the ENFP may seem directionless and without purpose, but ENFPs are actually quite consistent, in that they have a strong sense of values which they live with throughout their lives. Everything that they do must be in line with their values. An ENFP needs to feel that they are living their lives as their true Self, walking in step with what they believe is right. They see meaning in everything, and are on a continuous quest to adapt their lives and values to achieve inner peace. They're constantly aware and somewhat fearful of losing touch with themselves. Since emotional excitement is usually an important part of the ENFP's life, and because they are focused on keeping \"centered\", the ENFP is usually an intense individual, with highly evolved values.";
+}
+
+#talents:hover:after {
+	content:"You know, I hate to un-toot my own horn, but I don't have that many skills and talents. Fact is, I'm a kind of one-track guy. I have trouble focusing on more than one thing at once, unless they come in pairs. (I'm talking about breasts, if it wasn't obvious). As for all this \"values\" talk, I've gotta be honest: I don't have values. The words I live by are \"Look out for number one;\" if that's what you call a value, then that's kind of messed up. I prefer to think of it as a creed. \"True Self,\" Self being capitzalized. Who writes these things? More importantly, who believes them? Well, maybe it's not all wrong. That bit about \"Emotional Excitement\" rings pretty true, but that's still such a stuffy way to put it. How would I say that? Something along the lines of \"I like to have fun.\" See? It's simple. Fun things are fun. If something feels good, you want to do more of it. If it tastes good, you want to eat more of it. If it smells good, you--wait, this is ringing a bell. I must have lectured my brother on this before.";
+	color:#900;
+	font-style: italic;
+}
+
+#focus:after {
+	content: "An ENFP needs to focus on following through with their projects. This can be a problem area for some of these individuals. Unlike other Extraverted types, ENFPs need time alone to center themselves, and make sure they are moving in a direction which is in sync with their values. ENFPs who remain centered will usually be quite successful at their endeavors. Others may fall into the habit of dropping a project when they become excited about a new possibility, and thus they never achieve the great accomplishments which they are capable of achieving.";
+}
+
+#focus:hover:after {
+	content:"Yeah, maybe I used to be like that. Not the \"values (tm)\" part, but you know. But everyone needs some time alone every now and then. You gotta keep things fresh; even the harem gets a little stuffy sometimes. I mean, rarely. It's not like it's easy to get tired of having naked women hanging around the house--I don't know how Shun manages without them--but it does happen every once in a while. Some vicious demon of boredom will take hold of me, but I'll be right as rain in the morning. Call it a refractory period. Call it whatever you want.";
+	color:#900;
+	font-style: italic;
+}
+
+#people:after {
+	content: "Most ENFPs have great people skills. They are genuinely warm and interested in people, and place great importance on their inter-personal relationships. ENFPs almost always have a strong need to be liked. Sometimes, especially at a younger age, an ENFP will tend to be \"gushy\" and insincere, and generally \"overdo\" in an effort to win acceptance. However, once an ENFP has learned to balance their need to be true to themselves with their need for acceptance, they excel at bringing out the best in others, and are typically well-liked. They have an exceptional ability to intuitively understand a person after a very short period of time, and use their intuition and flexibility to relate to others on their own level.";
+}
+
+#people:hover:after {
+	content:"\"Genuinely warm and interested in people.\" Here we go again with the universally applicable language. Who doesn't like people? I'm people. Everyone's people. If you don't like people, you don't like yourself, and then you've got a problem, buddy. As for the bit about needing to be liked, I've got some information for you: I don't give a damn what you think of me, or anyone else for that matter. You think a guy who's pretty much turned his back on his living family by bringing girls home every night (you should have seen the looks on their faces when I first started doing that) cares what anyone thinks about him? Have some common sense. I don't care, and neither should you. Just let it all hang out, man.";
+	color:#900;
+	font-style: italic;
+}
+
+#possibilities:after {
+	content:"Because ENFPs live in the world of exciting possibilities, the details of everyday life are seen as trivial drudgery. They place no importance on detailed, maintenance-type tasks, and will frequently remain oblivous to these types of concerns. When they do have to perform these tasks, they do not enjoy themselves. This is a challenging area of life for most ENFPs, and can be frustrating for ENFP's family members.";
+}
+
+#possibilities:hover:after {
+	content:"Just look at my garden. Still think I'm shitty with maintenance tasks? Still think I see them as daily drudgery? I don't know what all this need for \"newness\" is. In my mind, the hallmark of a fun and comfortable life is an established routine. That's what's fun. That's what's safe.";
+	color:#900;
+	font-style: italic;
+}
+
+/*CLICKABLE HEADS*/
+
+img.clickable {
+	opacity:.3;
+	cursor:pointer;
+}
+
+/*EXPANDED PARTS*/
+
+#youngHistory, #middleHistory, #oldHistory {
+	display:none;
+}
+
+#dadFamily, #momFamily, #shunFamily, #mitsukiFamily, #ayameFamily, #yuiFamily, #junpeiFamily, #itsukiFamily, #yushioFamily {
+	display:none;
+}
+
+h3 {
+	text-align:center;
+	color:rgb(204,0,0);
+}
+
+.memory {
+	color:rgba(255,255,255,1);
+	font-style:italic;
+	width:700px;
+	padding:10px;
+	background-color:rgba(153,0,0,0.7);
+	border-style:dashed;
+	border-color:rgba(0,0,0,1);
+}
+
+.imageHolder img {
+	width:200px;
+	height:200px;
+}
+
+.imageHolder.one img {
+	width:250px;
+}
+
+/*youngHistory*/
+
+#mind {
+	background:url('http://i.imgur.com/llLovwn.png') no-repeat 50% 60%;
+}
+#mind:hover {
+	background-position: 30% 82%;
+}
+
+#kids {
+	background:url("http://i.imgur.com/CEb9lap.png") no-repeat center 10%;
+}
+#kids:hover {
+	background-position: bottom center;
+}
+
+#stick {
+	background:url("http://i.imgur.com/OexGhV1.png?1") no-repeat right;
+}
+#stick:hover {
+	background-position: top center;
+}
+
+#reading {
+	background:url("http://i.imgur.com/Ivphtp3.png") 70% 20%;
+}
+#reading:hover {
+	background-position: 40% 50%;
+}
+
+#necktie {
+	background:url("http://i.imgur.com/9EJMXpn.jpg?1") 90% 30%;
+}
+#necktie:hover {
+	background-position: 40% 10%;
+}
+
+#argument {
+	background:url("http://i.imgur.com/IuPAdeh.jpg?1") 90% 30%;
+}
+#argument:hover {
+	background-position: 20% 50%;
+}
+
+#brother {
+	background:url("http://i.imgur.com/UWl8lHl.jpg?1") 70% 40%;
+}
+#brother:hover {
+	background-position: 8% 11%;
+}
+
+/*This is for the here, not, gone fading animation*/
+.masonry {
+  max-width: 300px;
+  margin: 0 auto;
+  float:right;
+  overflow:hidden;
+}
+.masonry .item {
+  width:  200px;
+  height: 250px;
+  float: left;
+  margin-bottom: 5px;
+  position: relative;
+  
+}
+.item.w3 { width:  300px; }
+
+.item img {
+    position:absolute;
+    left:0;
+    top:0;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 8s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+#gone {
+    -webkit-animation-delay: -4s;
+}
+#here {
+    -webkit-animation-delay: -6s;
+}
+#missing {
+    -webkit-animation-delay: -2s;
+} 
+
+/*middleHistory*/
+
+#sleeping {
+	background:url("http://i.imgur.com/IEqeRSh.png") 70% 32%;
+}
+#sleeping:hover {
+	background-position: 70% center;
+}
+
+#conflict {
+	background:url("http://i.imgur.com/x3CvDUi.jpg") center 2%;
+}
+#conflict:hover {
+	background-position: center 10%;
+}
+
+#sword {
+	background:url("http://i.imgur.com/RlqWg9i.jpg") 80% top;
+}
+#sword:hover {
+	background-position: left 10%;
+}
+
+#book {
+	background:url("http://i.imgur.com/Oy5BZRM.png") 80% top;
+}
+#book:hover {
+	background-position: 52% 80%;
+}
+
+#sheathe {
+	background:url("http://i.imgur.com/teHvQSR.png") center top;
+}
+#sheathe:hover {
+	background-position: 90% 30%;
+}
+
+/*oldHistory*/
+
+#pillows {
+	float:right;
+  position:relative;
+  overflow:hidden;
+  height:250px;
+  width:300px;
+  margin:0 auto;
+}
+
+#pillows img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+#pillows img.top:hover {
+  opacity:0;
+}
+
+#mother {
+	background:url("http://i.imgur.com/oe159rY.jpg") 25% 30%;
+}
+#mother:hover {
+	background-position: 65% 40%;
+}
+
+#chest {
+	background:url("http://i.imgur.com/GnJ6Ujo.jpg") 40% top;
+}
+#chest:hover {
+	background-position: 60% 50%;
+}
+
+#naked {
+	background:url("http://i.imgur.com/e4xOs0x.png") 80% top;
+}
+#naked:hover {
+	background-position: 70% 80%;
+}
+
+#kiss {
+	background:url("http://i.imgur.com/Wr0cWLv.jpg") 20% top;
+}
+#kiss:hover {
+	background-position: 40% 80%;
+}
+
+#flowers {
+	background:url("http://i.imgur.com/HJ7LCIQ.png") 70% 90%;
+}
+#flowers:hover {
+	background-position: 40% 10%;
+}
+
+#draw {
+	background:url("http://i.imgur.com/Uwmo9V9.jpg?1") 75% 20%;
+}
+#draw:hover {
+	background-position: 40% 10%;
+}
+
+#pose {
+	background:url("http://i.imgur.com/cZdL6VV.jpg") 85% 60%;
+}
+#pose:hover {
+	background-position: 25% 10%;
+}
+
+
+
+.flashback {
+	width:300px;
+	height:auto;
+	margin: 0 auto;
+	border-radius:3px;
+	transition:background-position 1s;
+}
+
+.flashback .text {
+	font-size:12px;
+	font-style:italic;
+	color: #900;
+	text-align: center;
+
+	width:inherit;
+	background-color:rgba(255,255,255,.5);
+	display:none;
+	position:absolute;
+}
+.flashback:hover .text{
+	display:block;
+}
+
+/*family*/
+
+.bg {
+	position:absolute;
+	opacity:.3;
+	color:rgb(153,0,0);
+	font-size:24px;
+	font-style:italic;
+}
+
+/*Shun*/
+#tree {
+	background:url("http://i.imgur.com/RWNwp6j.png") 70% 50%;
+}
+#tree:hover {
+	background-position: 30% 40%;
+}
+
+#move {
+	background:url("http://i.imgur.com/QeAH1TQ.png") 80% 50%;
+}
+#move:hover {
+	background-position: 50% 40%;
+}
+
+#lies {
+	background:url("http://i.imgur.com/bvpQUGP.png") 80% 20%;
+}
+#lies:hover {
+	background-position: 20% 50%;
+}
+
+#photo {
+	background:url("http://i.imgur.com/bK7jLNM.png") 80% 50%;
+}
+#photo:hover {
+	background-position: 50% 40%;
+}
+
+#loser {
+	background:url("http://i.imgur.com/FCwAsRA.jpg") left 20%;
+}
+#loser:hover {
+	background-position: 50% 40%;
+}
+
+#rumors {
+	background:url("http://i.imgur.com/snKVCPT.png") 80% 50%;
+}
+#rumors:hover {
+	background-position: 50% 40%;
+}
+
+#forgiveness {
+	background:url("http://i.imgur.com/QYgdwHp.png") 50% 40%;
+}
+#forgiveness:hover {
+	background-position: 50% 10%;
+}
+
+#sorry {
+	background:url("http://i.imgur.com/K3iKtY9.jpg") 82% 30%;
+}
+#sorry:hover {
+	background-position: 50% 30%;
+}
+
+/*Mitsuki*/
+#hair {
+	background:url("http://i.imgur.com/CNZOnt7.png") 65% top;
+}
+#hair:hover {
+	background-position: 20% 46%;
+}
+
+#promise {
+	background:url("http://i.imgur.com/123e66G.png") 70% 50%;
+}
+#promise:hover {
+	background-position: 30% 60%;
+}
+
+#secret {
+	background:url("http://i.imgur.com/CzonbxG.png") 80% 50%;
+}
+#secret:hover {
+	background-position: 50% 40%;
+}
+
+
+/*Ayame*/
+#which {
+	background:url("http://i.imgur.com/LKRY3bl.jpg") 80% 50%;
+}
+#which:hover {
+	background-position: 50% 10%;
+}
+
+#worse {
+	background:url("http://i.imgur.com/LwuEIZm.png") 65% 10%;
+}
+#worse:hover {
+	background-position: 50% 60%;
+}
+
+#frog {
+	background:url("http://i.imgur.com/HyorRo6.jpg") 80% 50%;
+}
+#frog:hover {
+	background-position: 30% 20%;
+}
+
+#parallel {
+	background:url("http://i.imgur.com/7FyqCiy.png") 20% 20%;
+	width:100px;
+}
+#parallel:hover {
+	background-position: 75% 60%;
+}
+
+#homecoming {
+	background:url("http://i.imgur.com/R9KXCDO.jpg") 80% 60%;
+}
+#homecoming:hover {
+	background-position: 55% 10%;
+}
+
+#confront {
+	background:url("http://i.imgur.com/0PQLCvP.jpg") 50% 40%;
+}
+#confront:hover {
+	background-position: 50% 10%;
+}
+
+#foot {
+	background:url("http://i.imgur.com/ZUhZMij.png?2") 40% 60%;
+}
+#foot:hover {
+	background-position: 40% 40%;
+}
